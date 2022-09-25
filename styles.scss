@@ -19,7 +19,7 @@ $soft-magenta: hsl(300, 69%, 71%);
 body {
   padding: 3em 2.5em;
   background-color: $violet;
-  background-image: url(bg-mobile.svg);
+  background-image: url(./bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: "Poppins", sans-serif;
@@ -164,7 +164,7 @@ footer {
 }
 @media (min-width: 1312px) {
   body {
-    background-image: url(bg-desktop.svg);
+    background-image: url(./bg-desktop.svg);
     padding: 3em;
     .container {
       display: grid;
