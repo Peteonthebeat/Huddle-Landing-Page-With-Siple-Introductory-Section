@@ -1,0 +1,215 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Colors */
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* Body */
+body {
+  padding: 3em 2.5em;
+  background-color: $violet;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Header */
+header {
+  .logo {
+    width: 7em;
+    margin: 0 0 4em 0;
+  }
+}
+
+/* Container */
+.container {
+  display: grid;
+  gap: 2em;
+  margin: 0 0 3em 0;
+  /* Section One */
+  .one {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  /* Section Two */
+  .two {
+    text-align: center;
+    color: white;
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+    p {
+      font-family: "Open Sans", sans-serif;
+      margin: 1.5em 0;
+      line-height: 1.5em;
+    }
+    button {
+      all: unset;
+      font-size: 0.8em;
+      width: 200px;
+      height: 40px;
+      border-radius: 2em;
+      background-color: white;
+      color: $violet;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    button:hover {
+      background-color: $soft-magenta;
+      cursor: pointer;
+      transition: 1s ease-out;
+    }
+  }
+}
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0 0 0;
+
+  .socials {
+    a {
+      text-align: center;
+      float: left;
+      width: 36px;
+      height: 36px;
+      border: 1px solid white;
+      border-radius: 100%;
+      margin-right: 7px; /*space between*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        transition: 0.5s ease-out;
+        border: 2px solid $soft-magenta;
+        i {
+          color: $soft-magenta;
+          transition: 0.5s ease-out;
+        }
+      }
+    }
+
+    i {
+      font-size: 20px;
+      line-height: 38px;
+      color: white;
+    }
+  }
+}
+// Media and Breakpoints
+@media (min-width: 992px) {
+  header {
+    .logo {
+      width: auto;
+    }
+  }
+  .container {
+    .two {
+      h1 {
+        font-size: 4em;
+        font-weight: 600;
+      }
+      p {
+        font-size: 2.5em;
+        font-family: "Open Sans", sans-serif;
+        margin: 1em 0;
+        line-height: 1.5em;
+      }
+      button {
+        width: 400px;
+        height: 90px;
+        border-radius: 4em;
+        font-size: 2em;
+      }
+    }
+  }
+  footer {
+    .socials {
+      a {
+        text-align: center;
+        float: left;
+        width: 50px;
+        height: 50px;
+        border: 1.5px solid white;
+        border-radius: 100%;
+        margin-right: 1.5em; /*space between*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 25px;
+          line-height: 38px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1312px) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    padding: 3em;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      gap: 4em;
+      .one {
+        grid-area: 1 / 1 / 2 / 2;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .two {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: 2.5em;
+          margin: 1em 2.5em 0 0;
+        }
+        p {
+          font-size: 1em;
+          margin: 1em 4em 1em 0;
+        }
+
+        h1,
+        p {
+          text-align: left;
+        }
+        button {
+          width: 280px;
+          height: 70px;
+          border-radius: 4em;
+          font-size: 1.5em;
+        }
+      }
+    }
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 1em 0 0 0;
+    }
+  }
+}
