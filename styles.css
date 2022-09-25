@@ -15,7 +15,7 @@
 body {
   padding: 3em 2.5em;
   background-color: hsl(257deg, 40%, 49%);
-  background-image: url(bg-mobile.svg);
+  background-image: url(./bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: "Poppins", sans-serif;
@@ -143,7 +143,7 @@ footer .socials i {
 }
 @media (min-width: 1312px) {
   body {
-    background-image: url(bg-desktop.svg);
+    background-image: url(./bg-desktop.svg);
     padding: 3em;
   }
   body .container {
